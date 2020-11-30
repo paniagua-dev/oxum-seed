@@ -10,3 +10,4 @@ platforms/**/
 plugins/**/
 resources/**/
 *debug.log*
+build/

@@ -2,7 +2,7 @@
   "name": "paniagua-theme",
   "version": "1.0.0",
   "description": "Template as theme for Wordpress Websites",
-  "main": "index.js",
+  "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/jjpsoft/paniagua-theme/issues"
   },
-  "homepage": "https://github.com/jjpsoft/paniagua-theme#readme"
+  "homepage": "https://github.com/jjpsoft/paniagua-theme#readme",
+  "devDependencies": {
+    "copy-webpack-plugin": "^6.3.2",
+    "webpack": "^5.9.0",
+    "webpack-cli": "^4.2.0"
+  }
 }
