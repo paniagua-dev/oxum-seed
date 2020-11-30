@@ -11,8 +11,7 @@ module.exports = {
         new CopyPlugin({
             patterns: [
                 {
-                    from: "src/SERVER/theme/**/*",
-                    flatten: true
+                    from: path.resolve(__dirname, "src", "SERVER", "theme"),
                 },
             ],
         }),
