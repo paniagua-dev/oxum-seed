@@ -1,0 +1,12 @@
+.DS_Store
+.awcache/
+.idea/
+node_modules/
+coverage/
+dist/
+build/
+www/
+platforms/**/
+plugins/**/
+resources/**/
+*debug.log*

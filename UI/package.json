@@ -1,0 +1,17 @@
+{
+  "name": "ui-yichen.ch",
+  "version": "0.0.1",
+  "description": "Yichen.ch's UI",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Paniagua.dev",
+  "license": "MIT",
+  "dependencies": {
+    "vuejs": "^3.0.1"
+  },
+  "devDependencies": {
+    "@vue/cli": "^4.5.9"
+  }
+}
