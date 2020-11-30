@@ -1,0 +1,19 @@
+{
+  "name": "paniagua-theme",
+  "version": "1.0.0",
+  "description": "Template as theme for Wordpress Websites",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jjpsoft/paniagua-theme.git"
+  },
+  "author": "Paniagua.dev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jjpsoft/paniagua-theme/issues"
+  },
+  "homepage": "https://github.com/jjpsoft/paniagua-theme#readme"
+}
