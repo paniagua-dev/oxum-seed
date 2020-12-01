@@ -3,7 +3,7 @@ get_header(); ?>
     <main class="">
         <div class="">
             <div class="">
-                test
+                Paniagua-theme
             </div>
         </div>
     </main>
