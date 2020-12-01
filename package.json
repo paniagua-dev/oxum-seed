@@ -1,7 +1,7 @@
 {
   "name": "paniagua-theme",
   "version": "1.0.0",
-  "description": "Template as theme for Wordpress Websites",
+  "description": "Seed to develop a theme with Wordpress",
   "private": true,
   "scripts": {
     "gulp": "npx gulp",
