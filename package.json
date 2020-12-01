@@ -4,6 +4,9 @@
   "description": "Template as theme for Wordpress Websites",
   "private": true,
   "scripts": {
+    "gulp": "npx gulp",
+    "start": "npm run gulp",
+    "build": "npm run start -- --build-prod",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,9 +20,11 @@
   },
   "homepage": "https://github.com/jjpsoft/paniagua-theme#readme",
   "devDependencies": {
-    "copy-webpack-plugin": "^6.3.2",
-    "webpack": "^5.9.0",
-    "webpack-cli": "^4.2.0"
+    "gulp": "^4.0.2",
+    "gulp-less": "^4.0.1",
+    "less": "^3.12.2",
+    "less-plugin-autoprefix": "^2.0.0",
+    "less-plugin-clean-css": "^1.5.1"
   },
   "dependencies": {
     "primeflex": "^2.0.0"
