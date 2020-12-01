@@ -6,12 +6,17 @@
   "scripts": {
     "gulp": "npx gulp",
     "start": "npm run gulp",
+    "start-watch": "npm run start -- --watch-build",
+    "start-watch-ftp": "npm run start-watch -- --ftp=$FTPHOST --ftp-user=$FTPUSER --ftp-pwd=$FTPPWD",
     "build": "npm run start -- --build-prod",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jjpsoft/paniagua-theme.git"
+  },
+  "ftp": {
+    "remotePath": "/paniagua-theme"
   },
   "author": "Paniagua.dev",
   "license": "MIT",
@@ -24,7 +29,8 @@
     "gulp-less": "^4.0.1",
     "less": "^3.12.2",
     "less-plugin-autoprefix": "^2.0.0",
-    "less-plugin-clean-css": "^1.5.1"
+    "less-plugin-clean-css": "^1.5.1",
+    "vinyl-ftp": "^0.6.1"
   },
   "dependencies": {
     "primeflex": "^2.0.0"
