@@ -1,0 +1,20 @@
+@section-header-height: 80vh;
+@section-header-margin-top: -@main-header-height;
+.section {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  &-header {
+    display: block;
+    position: relative;
+    height: @section-header-height;
+    top: @section-header-margin-top;
+
+    &-container {
+      .row {
+        height: 100%;
+      }
+    }
+  }
+}

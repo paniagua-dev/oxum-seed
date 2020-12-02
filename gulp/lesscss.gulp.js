@@ -10,6 +10,7 @@ function buildLess() {
     return src(['./src/LESS/main.less'])
         .pipe(
             less({
+                paths: ['./src/LESS/variables'],
                 plugins: [
                     autoprefix,
                     (!!process.env.npm_config_build_prod) ? cleanCSSPlugin: ''

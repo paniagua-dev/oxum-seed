@@ -1,4 +1,4 @@
-const {merge}  = require('lodash');
+const {buildJs} = require("./gulp/js.gulp");
 const {FTPS} = require('./gulp/ftp.gulp');
 const {series, watch} = require('gulp');
 const {buildLess} = require('./gulp/lesscss.gulp');
