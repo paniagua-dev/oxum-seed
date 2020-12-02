@@ -3,7 +3,7 @@ const {FTPS} = require('./gulp/ftp.gulp');
 const {series, watch} = require('gulp');
 const {buildLess} = require('./gulp/lesscss.gulp');
 const {buildPhp} = require('./gulp/php.gulp');
-const {buildCss} = require('./gulp/css.gulp.js')
+const {buildCss} = require('./gulp/css.gulp.js');
 
 const builds = [buildPhp, buildLess, buildCss];
 

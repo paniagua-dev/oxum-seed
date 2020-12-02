@@ -1,20 +1,18 @@
-@section-header-height: 80vh;
-@section-header-margin-top: -@main-header-height;
-.section {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
+.section-header {
+  display: block;
+  position: relative;
+  margin-top: -@main-header-height;
 
-  &-header {
-    display: block;
-    position: relative;
-    height: @section-header-height;
-    top: @section-header-margin-top;
-
-    &-container {
-      .row {
-        height: 100%;
-      }
+  &-container {
+    &, .row {
+      height: 100%;
     }
+  }
+
+  .card {
+    padding: 60px;
+    background-color: fade(@brand-white, 95%);
+    max-height: 220px;
+    min-width: 270px;
   }
 }

@@ -8,14 +8,8 @@
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>"/>
 	<?php wp_head(); ?>
 </head>
-
 <body <?php body_class(); ?> data-fixed-footer="<?php echo get_theme_mod('footer_fixed'); ?>">
-<header class="main-header">
-    <nav class="navbar navbar-light">
-        <h3>
-            <a class="navbar-brand" href="/" title="<?php echo get_bloginfo() ?>">
-				<?php echo get_bloginfo() ?>
-            </a>
-        </h3>
-    </nav>
-</header>
+<main class="main">
+    <header class="main-header">
+		<?php require_once('inc/navbar.php'); ?>
+    </header>

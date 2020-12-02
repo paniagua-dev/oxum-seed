@@ -27,8 +27,15 @@
 			wp_enqueue_style($style_name, $this->get_theme_path() . $style_name, $dependencies, $version, $media);
 		}
 
-		public function enqueue_script($script_name = 'main.js', $dependencies = [], $version = '1.0.0', $in_footer = true) {
-			wp_enqueue_script($script_name, $this->get_theme_path() . $script_name, $dependencies, $version, $in_footer);
+		public function enqueue_script($script_name = 'main.js', $path, $dependencies = [], $version = '1.0.0', $in_footer = true) {
+			if(!isset($path)) {
+				$path = $this->get_theme_path() . $script_name;
+			}
+			wp_enqueue_script($script_name, $path, $dependencies, $version, $in_footer);
+		}
+
+		public function enqueue_external_script($script_name, $script_url, $dependencies = [], $version = '1.0.0', $in_footer = true) {
+			$this->enqueue_script($script_name, $script_url, $dependencies = [], $version = '1.0.0', $in_footer = true);
 		}
 
 		/**

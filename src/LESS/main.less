@@ -1,10 +1,20 @@
 @import (reference) 'variables';
 
 /* CSS Base */
-@import './base.less';
+@import './base';
 
 /* Main header style */
-@import './header.less';
+@import './header';
 
 /* Sections */
-@import './sections/section-header.less';
+@import './sections/index';
+@import './sections/section-header';
+@import './sections/section-content';
+
+/* Main footer style */
+@import './footer';
+
+.main {
+  position: relative;
+  overflow: hidden;
+}

@@ -1,10 +1,10 @@
-<?php get_header(); ?>
-    <main class="">
-        <?php get_template_part('template-parts/header'); ?>
-        <div class="">
-            <div class="">
-                Paniagua-theme
-            </div>
+<?php
+	get_header();
+	get_template_part('template-parts/section', 'header');
+?>
+    <section class="section section-content shadow-lg">
+        <div class="container">
+
         </div>
-    </main>
+    </section>
 <?php get_footer(); ?>
