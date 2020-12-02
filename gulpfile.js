@@ -12,7 +12,7 @@ if (!!process.env.npm_config_ftp) {
 }
 
 if (!!process.env.npm_config_watch_build) {
-    const watchers = ['./src/SERVER/**/*', './src/LESS/**/*'];
+    const watchers = ['./src/server/**/*', './src/less/**/*'];
     exports.default = function () {
         watch(watchers, {ignoreInitial: false}, series(...builds));
     }
