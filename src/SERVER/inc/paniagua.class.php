@@ -28,11 +28,8 @@ class WP_Paniagua {
      * @import should be run in the hook 'init'
      */
     public function no_more_jquery() {
-
         if(!is_admin()) {
-            echo 'run';
             wp_deregister_script('jquery');
-
             wp_register_script('jquery', false);
         }
     }

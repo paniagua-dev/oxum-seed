@@ -1,8 +1,8 @@
 const {destination} = require("./utls");
 const {src} = require('gulp');
 
-function phpBuild() {
+function buildPhp() {
     return src('./src/SERVER/**/*.*').pipe(destination());
 }
 
-exports.phpBuild = phpBuild;
+exports.buildPhp = buildPhp;

@@ -1,9 +1,9 @@
 const {FTPS} = require('./gulp/ftp.gulp');
 const {series, watch} = require('gulp');
-const {lessBuild} = require('./gulp/lesscss.gulp');
-const {phpBuild} = require('./gulp/php.gulp');
+const {buildLess} = require('./gulp/lesscss.gulp');
+const {buildPhp} = require('./gulp/php.gulp');
 
-const builds = [phpBuild, lessBuild];
+const builds = [buildPhp, buildLess];
 
 if(!!process.env.npm_config_ftp){
     builds.push(FTPS);

@@ -4,7 +4,7 @@ const LessPluginCleanCSS = require('less-plugin-clean-css');
 const less = require('gulp-less');
 const {destination} = require('./utls');
 
-function lessBuild() {
+function buildLess() {
     const autoprefix = new LessAutoprefix({ browsers: ['last 2 versions'] });
     const cleanCSSPlugin = new LessPluginCleanCSS({advanced: true});
     return src(['./src/LESS/main.less'])
@@ -19,4 +19,4 @@ function lessBuild() {
         .pipe(destination());
 }
 
-exports.lessBuild = lessBuild;
+exports.buildLess = buildLess;
