@@ -1,11 +1,13 @@
+const {merge}  = require('lodash');
 const {FTPS} = require('./gulp/ftp.gulp');
 const {series, watch} = require('gulp');
 const {buildLess} = require('./gulp/lesscss.gulp');
 const {buildPhp} = require('./gulp/php.gulp');
+const {buildCss} = require('./gulp/css.gulp.js')
 
-const builds = [buildPhp, buildLess];
+const builds = [buildPhp, buildLess, buildCss];
 
-if(!!process.env.npm_config_ftp){
+if (!!process.env.npm_config_ftp) {
     builds.push(FTPS);
 }
 

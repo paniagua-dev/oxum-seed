@@ -5,6 +5,7 @@ $paniagua = new WP_Paniagua();
 
 function enqueue_scripts() {
     global $paniagua;
+    $paniagua->enqueue_style('vendor/css/bootstrap.min.css');
     $paniagua->enqueue_style();
 }
 
