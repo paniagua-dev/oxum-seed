@@ -17,6 +17,9 @@
 		public function preset_wordpress() {
 			//Add Featured Images & Post Thumbnails support
 			add_theme_support('post-thumbnails');
+
+			//Add <title> tag support in the header
+			add_theme_support( 'title-tag' );
 		}
 
 		private function get_theme_path() {
