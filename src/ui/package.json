@@ -1,16 +1,13 @@
 {
-  "name": "paniagua-theme-ui",
+  "name": "oxum-theme-ui",
   "version": "1.0.0",
-  "description": "Paniagua theme's UI",
+  "description": "Oxum theme's UI",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Paniagua.dev",
   "license": "MIT",
-  "dependencies": {
-    "vuejs": "^3.0.1"
-  },
   "devDependencies": {
     "@vue/cli": "^4.5.9"
   }
