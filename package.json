@@ -1,5 +1,5 @@
 {
-  "name": "oxum-theme",
+  "name": "oxum-seed-theme",
   "version": "1.0.0",
   "description": "Seed to develop a theme with Wordpress",
   "private": true,
@@ -13,10 +13,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jjpsoft/paniagua-theme.git"
+    "url": "git+https://github.com/paniagua-dev/oxum-seed-theme.git"
   },
   "ftp": {
-    "remotePath": "/paniagua-theme"
+    "remotePath": "/oxum-theme"
   },
   "author": "Paniagua.dev",
   "license": "MIT",
