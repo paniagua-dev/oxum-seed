@@ -5,7 +5,7 @@
 	 * @Important should be imported in the Wordpress file functions.php
 	 */
 
-	class WP_Paniagua {
+	class WP_Oxum {
 		public $theme_path;
 
 		function __construct() {
