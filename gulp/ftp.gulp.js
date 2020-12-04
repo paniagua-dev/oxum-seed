@@ -13,7 +13,7 @@ const FTPS = function () {
         host: process.env.npm_config_ftp,
         user: process.env.npm_config_ftp_user,
         password: process.env.npm_config_ftp_pwd,
-        remotePath: process.env.npm_config_ftp_remote_path || packageJson.ftp.remotePath || '/paniagua-theme',
+        remotePath: process.env.npm_config_ftp_remote_path || packageJson.ftp.remotePath || '/oxum-seed-theme',
         secure: true,
         reload: true,
         log: (...args) => {
