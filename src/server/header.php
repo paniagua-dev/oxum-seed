@@ -9,6 +9,12 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?> data-fixed-footer="<?php echo get_theme_mod('footer_fixed'); ?>">
+<noscript>
+    <strong>
+        We're sorry but this website doesn't work properly without JavaScript enabled.
+        Please enable it to continue.
+    </strong>
+</noscript>
 <main class="main">
     <header class="main-header">
 		<?php require_once('inc/navbar.php'); ?>
