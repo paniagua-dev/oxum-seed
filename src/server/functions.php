@@ -4,8 +4,12 @@ $oxum = new WP_Oxum();
 $oxum->preset_wordpress();
 function enqueue_scripts() {
     global $oxum;
-    $oxum->enqueue_style('vendor/css/bootstrap.min.css');
-    $oxum->enqueue_style();
+    $oxum->enqueue_style('css/bootstrap.min.css');
+    $oxum->enqueue_style('css/main.css');
+    $oxum->enqueue_style('js/artwork-ui/artwork-ui.css');
+    $oxum->enqueue_style('js/artwork-ui/artwork-ui.core.css');
+    $oxum->enqueue_script('artwork-ui.js','js/artwork-ui/');
+	$oxum->enqueue_script('artwork-ui.core.js', 'js/artwork-ui/');
     $oxum->enqueue_external_script('uikit.min.js', 'https://cdn.jsdelivr.net/npm/uikit@3.5.10/dist/js/uikit.min.js');
 }
 add_action( 'init', [$oxum, 'no_more_jquery']); //Remove jQuery

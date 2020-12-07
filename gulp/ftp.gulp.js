@@ -24,7 +24,6 @@ const FTPS = function () {
     const connection = ftp.create(credentials);
 
     return src('./build/**/*', {base: './build', buffer: true})
-        .pipe(connection.newer(credentials.remotePath))
         .pipe(connection.dest(credentials.remotePath));
 
 };

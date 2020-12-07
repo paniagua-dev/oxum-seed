@@ -3,13 +3,11 @@ const {merge} = require('lodash');
 const {src} = require('gulp');
 
 const buildJs = function () {
-    const mains = [];
-    const vendors = [
-        './node_modules/bootstrap/dist/js/bootstrap.min.js',
+    const mains = [
+        './src/ui/**/*'
     ];
-    const build = merge(mains, vendors);
-    return src(merge(mains, vendors))
-        .pipe(destination('build/vendor/js/'));
+    return src(mains)
+        .pipe(destination('build/js/'));
 }
 
 exports.buildJs = buildJs;

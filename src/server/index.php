@@ -4,7 +4,7 @@
 ?>
     <section class="section section-content shadow-lg">
         <div class="container">
-
+            <div id="artwork-ui" style="max-width: 1030px;"></div>
         </div>
     </section>
 <?php get_footer(); ?>
