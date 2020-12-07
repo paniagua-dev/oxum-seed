@@ -23,3 +23,29 @@ h2 {
 h3 {
   font-size: 1.2rem;
 }
+
+button {
+  border: none;
+  border-radius: 0;
+  padding: 8px 12px 8px 14px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1;
+  margin: 0 0 5px;
+  display: inline-block;
+  color: @text-color;
+  transition: 0.2s;
+  background-color: transparent;
+
+  &:focus {
+    outline: 0;
+  }
+
+  &.active, &:enabled:hover {
+    background-color: @gray-light;
+    color: @text-color;
+    border: none;
+    outline: 0;
+  }
+}

@@ -3,4 +3,31 @@
   background-color: @brand-white;
   padding-top: @brand-padding-xl;
   padding-bottom: @brand-padding-xl;
+
+  button.p-highlight {
+    &:extend(button.active);
+  }
+
+  .p-galleria {
+    &-mask {
+      background-color: fade(@brand-black, 90%);
+
+      .pi {
+        font-size: 32px;
+        color: @brand-white;
+      }
+    }
+
+    &-thumbnail-container {
+      .pi {
+        font-size: 1.3rem;
+      }
+    }
+
+    &-item-nav, &-thumbnail-next, &-thumbnail-prev {
+      &.p-link {
+        background: transparent;
+      }
+    }
+  }
 }
