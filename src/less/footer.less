@@ -1,3 +1,5 @@
+@main-footer-height: 290px;
+
 .main-footer {
   position: fixed;
   bottom: 0;
@@ -5,10 +7,16 @@
   width: 100%;
   z-index: -1;
   background-color: @gray-light;
+  height: @main-footer-height;
 
   &-container {
     padding: 110px 0;
   }
+}
+
+.footer-spacer {
+  height: @main-footer-height;
+  background-color: transparent;
 }
 
 .footer-made-icon {

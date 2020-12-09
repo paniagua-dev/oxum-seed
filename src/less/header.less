@@ -2,8 +2,14 @@
   height: @main-header-height;
   position: relative;
   z-index: 1;
+  background-color: transparent;
+  transition: @brand-transition-duration;
 
   .navbar {
     height: 100%;
+  }
+
+  &.uk-active {
+    background-color: @brand-white;
   }
 }

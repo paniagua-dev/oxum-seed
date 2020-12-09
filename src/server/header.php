@@ -16,6 +16,6 @@
     </strong>
 </noscript>
 <main class="main">
-    <header class="main-header">
+    <header class="main-header container-fluid" uk-sticky="top: 200;">
 		<?php require_once('inc/navbar.php'); ?>
     </header>

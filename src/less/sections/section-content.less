@@ -1,5 +1,4 @@
 .section-content {
-  margin-bottom: 290px;
   background-color: @brand-white;
   padding-top: @brand-padding-xl;
   padding-bottom: @brand-padding-xl;
@@ -28,6 +27,29 @@
       &.p-link {
         background: transparent;
       }
+    }
+  }
+
+
+  .portfolio {
+    > div {
+      transition: 0.5s;
+    }
+
+    .item-page-0 {
+      opacity: 0;
+    }
+
+    &.filtered, &.all, &.page-has-changed {
+      .item-in-view {
+        opacity: 1;
+        //Important in order to override visibility set by uikit library
+        visibility: visible !important;
+      }
+    }
+
+    .oxum-fade {
+      opacity: 1;
     }
   }
 }

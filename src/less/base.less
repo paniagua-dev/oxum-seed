@@ -6,6 +6,7 @@ html, body {
 
 h1, h2, h3 {
   text-transform: uppercase;
+  color: @title-color;
 }
 
 h1 {
@@ -24,7 +25,7 @@ h3 {
   font-size: 1.2rem;
 }
 
-button {
+button, .button, .oxum-button {
   border: none;
   border-radius: 0;
   padding: 8px 12px 8px 14px;
@@ -34,9 +35,9 @@ button {
   line-height: 1;
   margin: 0 0 5px;
   display: inline-block;
-  color: @text-color;
-  transition: 0.2s;
+  transition: @brand-transition-duration;
   background-color: transparent;
+  color: @text-color;
 
   &:focus {
     outline: 0;
@@ -47,5 +48,61 @@ button {
     color: @text-color;
     border: none;
     outline: 0;
+  }
+
+}
+
+button.button.p-button.oxum-button {
+  //** IN ORDER TO INCREASE THE SPECIFICITY OF BUTTONS **//
+  &:extend(.button);
+
+  &:hover {
+    &:extend(.button.active);
+  }
+}
+
+
+a, .link {
+  position: relative;
+
+  &, &:active, &:hover {
+    color: @text-color;
+    text-decoration: none;
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 5%;
+    bottom: 0;
+    height: 1px;
+    transition: @brand-transition-duration;
+    width: 0;
+    max-width: 1000px;
+    background-color: currentColor;
+  }
+
+  &:hover:after {
+    width: 90%;
+  }
+}
+
+.link {
+  text-transform: uppercase;
+}
+
+.figure {
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175);
+  display: inline-block;
+  border: 1px solid;
+  border-radius: 4px;
+  max-width: 100%;
+
+  img {
+    display: block;
+    border: 10px solid @brand-white;
+    border-radius: 16px;
+    height: auto;
   }
 }

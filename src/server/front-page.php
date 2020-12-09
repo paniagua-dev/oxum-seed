@@ -1,6 +1,6 @@
 <?php
 	get_header();
-	get_template_part('template-parts/page/section', 'header');
+	get_template_part('template-parts/section', 'header');
 
 	/** GET POST TYPE ARTWORKS **/
 	$args = array(
@@ -11,9 +11,9 @@
 	);
 	$loop = new WP_Query($args);
 ?>
-	<section class="section section-content shadow-lg">
-		<div class="container">
-			<script>
+    <section class="section section-content shadow-lg">
+        <div class="container">
+            <script>
                 var artworks = {
                     works: [
 						<?php
@@ -28,7 +28,7 @@
                             label: '<?php the_title(); ?>',
                             category: '<?php echo get_the_category()[0]->name; ?>'
                         },
-						<?php endfor; ?>
+                        <?php endfor; ?>
 						<?php
 						/** SET CATEGORIES **/
 						$categories[get_the_category()[0]->name] = get_the_category()[0]->name;
@@ -44,14 +44,14 @@
 
                     ]
                 };
-			</script>
-			<div
-				id="artwork-ui"
-				class="artwork-ui"
-				uk-scrollspy="target: .portfolio > .item-in-view; cls: oxum-fade; delay: 500"
-				style="max-width: 1030px; margin: auto;"
-			>
-			</div>
-		</div>
-	</section>
+            </script>
+            <div
+                id="artwork-ui"
+                class="artwork-ui"
+                uk-scrollspy="target: .portfolio > .item-in-view; cls: oxum-fade; delay: 500"
+                style="max-width: 1030px; margin: auto;"
+            >
+            </div>
+        </div>
+    </section>
 <?php get_footer(); ?>

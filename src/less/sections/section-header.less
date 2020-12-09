@@ -1,8 +1,11 @@
+@section-page-min-height: 20vh;
+
 .section-header {
   display: block;
   position: relative;
   margin-top: -@main-header-height;
   height: calc(-@main-header-height + @section-min-height);
+  background-color: @brand-white;
 
   &-container {
     &, .row {
@@ -15,10 +18,28 @@
     background-color: fade(@brand-white, 95%);
     max-height: 220px;
     min-width: 270px;
+    margin:auto;
 
     .card-text {
       font-size: 1.5rem;
       color: @gray;
+    }
+  }
+
+
+  /** STYLE FOR PAGES **/
+
+  &.page {
+    height: @section-page-min-height;
+    min-height: @section-page-min-height;
+
+    .card {
+      padding: 0;
+      text-align: center;
+    }
+
+    .card-title {
+      margin: 0;
     }
   }
 }
