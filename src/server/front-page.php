@@ -21,14 +21,12 @@
 						/** ARTWORK UI CONFIG **/
 						while($loop->have_posts()) : $loop->the_post();
 						?>
-						<?php for($i = 0; $i < 2; $i++) : ?>
                         {
                             src: '<?php echo htmlspecialchars(get_field('painting')); ?>',
-                            description: '<?php echo htmlspecialchars(get_field('description')); ?>',
+                            description: '<?php echo htmlspecialchars(get_field('description'));?>',
                             label: '<?php the_title(); ?>',
                             category: '<?php echo get_the_category()[0]->name; ?>'
                         },
-                        <?php endfor; ?>
 						<?php
 						/** SET CATEGORIES **/
 						$categories[get_the_category()[0]->name] = get_the_category()[0]->name;
@@ -38,10 +36,11 @@
                     categories: [
 						<?php
 						foreach($categories as $category) {
-							echo "'" . $category . "',";
+							if(!empty($category) && $category !== '') {
+								echo "'" . $category . "',";
+							}
 						}
 						?>
-
                     ]
                 };
             </script>
