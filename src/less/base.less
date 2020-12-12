@@ -65,22 +65,28 @@ button.button.p-button.oxum-button {
 a, .link {
   position: relative;
 
+  &:hover {
+    cursor: pointer;
+  }
+
   &, &:active, &:hover {
     color: @text-color;
     text-decoration: none;
   }
 
-  &:after {
-    content: '';
-    display: block;
-    position: absolute;
-    left: 5%;
-    bottom: 0;
-    height: 1px;
-    transition: @brand-transition-duration;
-    width: 0;
-    max-width: 1000px;
-    background-color: currentColor;
+  &:not(.no-transition) {
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 5%;
+      bottom: 0;
+      height: 1px;
+      width: 0;
+      max-width: 1000px;
+      background-color: currentColor;
+      transition: @brand-transition-duration;
+    }
   }
 
   &:hover:after {
@@ -92,17 +98,17 @@ a, .link {
   text-transform: uppercase;
 }
 
-.figure {
-  box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175);
+.figure, figure {
   display: inline-block;
-  border: 1px solid;
   border-radius: 4px;
   max-width: 100%;
 
   img {
     display: block;
-    border: 10px solid @brand-white;
-    border-radius: 16px;
-    height: auto;
+    box-shadow: @brand-shadow;
   }
+}
+
+img {
+  height: auto;
 }

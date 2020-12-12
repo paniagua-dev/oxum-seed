@@ -19,11 +19,19 @@
 			add_theme_support('post-thumbnails');
 
 			//Add <title> tag support in the header
-			add_theme_support( 'title-tag' );
+			add_theme_support('title-tag');
+
+			//Add Navigation Menu Support
+			add_action('init', array($this, 'register_menu'));
+
 		}
 
 		private function get_theme_path() {
 			return (isset($this->theme_path)) ? $this->theme_path : get_template_directory_uri() . '/';
+		}
+
+		public function register_menu() {
+			register_nav_menu('Main menu', 'Main navigation menu');
 		}
 
 		public function enqueue_style($style_name, $dependencies = [], $version = '1.0.0', $media = 'all') {
@@ -34,7 +42,7 @@
 			wp_enqueue_style($style_name, $style_url, $dependencies, $version, $media);
 		}
 
-		public function enqueue_script($script_name, $path, $dependencies = [], $version = '1.0.0', $in_footer = true) {
+		public function enqueue_script($script_name, $path = '', $dependencies = [], $version = '1.0.0', $in_footer = true) {
 			wp_enqueue_script($script_name, $this->get_theme_path() . $path . $script_name, $dependencies, $version, $in_footer);
 		}
 

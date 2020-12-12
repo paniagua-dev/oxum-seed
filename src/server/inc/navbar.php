@@ -5,6 +5,13 @@
 				<?php echo get_bloginfo() ?>
             </a>
         </h2>
-        <a class="link" href="/contact">Contact</a>
+        <a class="navigatin-menu-link link no-transition uk-icon-link" oxum__navigation-menu--link>
+            <div class="navigation-menu-burger default-animation" oxum__navigation-menu--burger>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </a>
     </div>
 </nav>

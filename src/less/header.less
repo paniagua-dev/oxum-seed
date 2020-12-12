@@ -1,15 +1,37 @@
+@import (reference, less) './node_modules/animate.css/animate.css';
+
 .main-header {
   height: @main-header-height;
   position: relative;
   z-index: 1;
   background-color: transparent;
-  transition: @brand-transition-duration;
 
   .navbar {
     height: 100%;
+
+    .navbar-brand {
+      margin: 0;
+
+      a {
+        color: @title-color;
+      }
+    }
+
+    .link {
+      display: block;
+      height: 30px;
+      line-height: 30px;
+      padding: 10px;
+      box-sizing: border-box;
+    }
   }
 
-  &.uk-active {
+  &.active {
     background-color: @brand-white;
+    animation: @brand-transition-duration-max fadeInDown;
+  }
+
+  &.inactive {
+    animation: @brand-transition-duration-max fadeIn;
   }
 }

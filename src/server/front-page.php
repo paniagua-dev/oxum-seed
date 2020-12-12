@@ -47,7 +47,7 @@
             <div
                 id="artwork-ui"
                 class="artwork-ui"
-                uk-scrollspy="target: .portfolio > .item-in-view; cls: oxum-fade; delay: 500"
+                uk-scrollspy="target: .portfolio > .item-in-view; cls: opacity; delay: 500"
                 style="max-width: 1030px; margin: auto;"
             >
             </div>

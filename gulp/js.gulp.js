@@ -1,5 +1,4 @@
 const {destination} = require("./utls");
-const {merge} = require('lodash');
 const {src} = require('gulp');
 
 const buildJs = function () {
