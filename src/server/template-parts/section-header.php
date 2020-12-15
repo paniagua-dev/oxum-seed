@@ -1,7 +1,7 @@
 <section
     class="section section-header"
     style="background-image: url(<?php echo the_post_thumbnail_url('full'); ?>)"
-    uk-parallax="bgy: -200"
+    uk-parallax="bgy: 40"
 >
     <div class="section-header-container container">
         <div class="row flex-column justify-content-center align-content-center">
