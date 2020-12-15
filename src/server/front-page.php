@@ -54,12 +54,13 @@
 						}
 					}
 					?>
-                ]
+                ],
+                filterLabel: 'Years ',
             };
         </script>
         <div
             id="artwork-ui"
-            class="artwork-ui"
+            class="artwork-ui container"
             uk-scrollspy="target: .portfolio > .item-in-view; cls: opacity; delay: 500"
             style="max-width: 1030px; margin: auto;"
         >

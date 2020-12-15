@@ -1,5 +1,8 @@
 /** LIBRARY OVERRIDES **/
 
+.card-body {
+  padding: 1rem;
+}
 
 button.button.p-button.oxum-button {
   //** IN ORDER TO INCREASE THE SPECIFICITY OF BUTTONS **//
@@ -70,12 +73,14 @@ button.button.p-button.oxum-button {
       display: flex;
       justify-content: space-between;
       width: 100%;
+      flex-wrap: wrap;
     }
 
     &__filter__buttons--wrapper,
     &__filter__select--wrapper {
       display: inline-block;
       width: auto;
+      margin-bottom: 24px;
     }
 
     &.filtered, &.all, &.page-has-changed {
@@ -88,6 +93,8 @@ button.button.p-button.oxum-button {
   }
 
   .p-autocomplete {
+    margin-left: 12px;
+
     .p-autocomplete-loader {
       right: 40px;
     }
