@@ -13,7 +13,7 @@ button.button.p-button.oxum-button {
 .wp-block-button__link {
   &:extend(.button);
 
-  &:hover, &:active{
+  &:hover, &:active {
     &:extend(.button.active);
 
     &:after {
@@ -21,7 +21,7 @@ button.button.p-button.oxum-button {
     }
   }
 
-  &:visited{
+  &:visited {
     color: @text-color;
   }
 }
@@ -67,7 +67,15 @@ button.button.p-button.oxum-button {
     }
 
     &__filter--wrapper {
-      justify-content: center;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    &__filter__buttons--wrapper,
+    &__filter__select--wrapper {
+      display: inline-block;
+      width: auto;
     }
 
     &.filtered, &.all, &.page-has-changed {
@@ -111,22 +119,6 @@ button.button.p-button.oxum-button {
         &:hover {
           &:extend(.button.active);
         }
-      }
-    }
-  }
-
-  .page:not(.home) & {
-    .portfolio {
-      &__filter--wrapper {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-      }
-
-      &__filter__buttons--wrapper,
-      &__filter__select--wrapper {
-        display: inline-block;
-        width: auto;
       }
     }
   }
