@@ -1,6 +1,6 @@
 <section
     class="section section-header for-page"
-    uk-parallax="bgy: -200"
+    uk-parallax="bgy: -60"
     style="background-image: url(<?php echo the_post_thumbnail_url('full'); ?>)"
 >
     <div class="section-header-container container">
