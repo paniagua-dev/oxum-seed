@@ -17,7 +17,7 @@ function buildLess() {
                 ],
             })
         )
-        .pipe(destination('build/css/'));
+        .pipe(destination('css/'));
 }
 
 exports.buildLess = buildLess;

@@ -6,7 +6,7 @@ const buildCss = function () {
         './node_modules/bootstrap/dist/css/bootstrap.min.css',
     ];
     return src(mains)
-        .pipe(destination('build/css/'));
+        .pipe(destination('css/'));
 }
 
 exports.buildCss = buildCss;

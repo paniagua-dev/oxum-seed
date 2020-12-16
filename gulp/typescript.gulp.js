@@ -23,7 +23,7 @@ const buildTypescript = function () {
         .pipe(concat('main.js'))
         .pipe(rename({suffix: '.min'}))
         .pipe(uglify())
-        .pipe(destination('build/js/'));
+        .pipe(destination('js/'));
 }
 
 exports.buildTypescript = buildTypescript;

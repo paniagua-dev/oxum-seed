@@ -15,7 +15,7 @@ const buildJs = function () {
         .pipe(concat('vendors.js'))
         .pipe(rename({suffix: '.min'}))
         .pipe(uglify())
-        .pipe(destination('build/js/'));
+        .pipe(destination('js/'));
 }
 
 exports.buildJs = buildJs;

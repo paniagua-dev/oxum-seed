@@ -3,7 +3,7 @@ const {src} = require('gulp');
 
 const buildAssets = function () {
     return src(['./src/assets/**/*.svg'])
-        .pipe(destination('build/assets/'));
+        .pipe(destination('assets/'));
 }
 
 exports.buildAssets = buildAssets;
