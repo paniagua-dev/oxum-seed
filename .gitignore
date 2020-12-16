@@ -10,5 +10,5 @@ platforms/**/
 plugins/**/
 resources/**/
 *debug.log*
-build/
+build**/**/*
 src/ui/sources/**/*
