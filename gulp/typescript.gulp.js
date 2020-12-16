@@ -2,6 +2,9 @@ const {destination} = require('./utls');
 const ts = require('gulp-typescript');
 const tsProject = ts.createProject('tsconfig.json');
 const babel = require('gulp-babel');
+const uglify = require('gulp-uglify');
+const rename = require('gulp-rename');
+const concat = require('gulp-concat');
 
 const buildTypescript = function () {
     return tsProject.src()
@@ -17,6 +20,9 @@ const buildTypescript = function () {
                 }
             ]]
         }))
+        .pipe(concat('main.js'))
+        .pipe(rename({suffix: '.min'}))
+        .pipe(uglify())
         .pipe(destination('build/js/'));
 }
 

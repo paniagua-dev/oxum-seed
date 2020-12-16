@@ -29,8 +29,11 @@
     "@babel/preset-env": "^7.12.10",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
     "gulp-less": "^4.0.1",
+    "gulp-rename": "^2.0.0",
     "gulp-typescript": "^6.0.0-alpha.1",
+    "gulp-uglify": "^3.0.2",
     "less": "^3.12.2",
     "less-plugin-autoprefix": "^2.0.0",
     "less-plugin-clean-css": "^1.5.1",
@@ -41,6 +44,7 @@
     "@fortawesome/fontawesome-free": "^5.15.1",
     "animate.css": "^4.1.1",
     "bootstrap": "^4.5.3",
+    "gsap": "^3.5.1",
     "lodash": "^4.17.20",
     "primeflex": "^2.0.0"
   }

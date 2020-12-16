@@ -11,3 +11,4 @@ plugins/**/
 resources/**/
 *debug.log*
 build/
+src/ui/sources/**/*
