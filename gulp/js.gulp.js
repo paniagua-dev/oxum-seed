@@ -8,8 +8,8 @@ const {src} = require('gulp');
 const buildJs = function () {
     const vendors = [
         './node_modules/gsap/dist/gsap.min.js',
-        './src/ui/sources/uikit/js/uikit.js',
-        './src/ui/sources/uikit/js/uikit-icons.js',
+        './node_modules/uikit/dist/js/uikit.min.js',
+        './node_modules/uikit/dist/js/uikit-icons.min.js',
     ];
     return src(vendors)
         .pipe(concat('vendors.js'))
