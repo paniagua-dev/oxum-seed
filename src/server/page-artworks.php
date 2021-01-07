@@ -13,7 +13,7 @@
 ?>
 <section class="section section-content shadow-lg">
     <div class="container-md">
-        <?php include('inc/artowrks-loop.php'); ?>
+        <?php include('inc/artworks-loop.php'); ?>
         <div
             id="artwork-ui"
             class="artwork-ui container"
