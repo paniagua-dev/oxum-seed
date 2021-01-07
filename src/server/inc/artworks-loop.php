@@ -17,7 +17,7 @@
             <?php
 
             /** SET CATEGORIES **/
-            $categories[] = $category;
+            $categories['"' . $category . '"'] = $category;
 
             /** SET FILTERS **/
             $filters[get_field('year')] = get_field('year');
