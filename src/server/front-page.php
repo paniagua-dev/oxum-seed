@@ -6,7 +6,7 @@
 	$args = array(
 		'post_type' => 'artwork',
 		'post_status' => 'publish',
-		'posts_per_page' => 8,
+		'posts_per_page' => -1,
 		'order' => 'DEC'
 	);
 	$loop = new WP_Query($args);
@@ -19,18 +19,19 @@
 					$categories = array();
 					/** ARTWORK UI CONFIG **/
 					while($loop->have_posts()) : $loop->the_post();
+					$category = print_processed_html(get_the_category()[0]->name);
 					?>
                     {
                         src: '<?php echo htmlspecialchars(get_field('painting')); ?>',
                         description: '<?php echo htmlspecialchars(get_field('description'));?>',
                         label: '<?php the_title(); ?>',
-                        category: '<?php echo get_the_category()[0]->name; ?>',
+                        category: '<?php echo $category; ?>',
                         filter: '<?php echo htmlspecialchars(get_field('year')); ?>'
                     },
 					<?php
 
 					/** SET CATEGORIES **/
-					$categories[get_the_category()[0]->name] = get_the_category()[0]->name;
+					$categories[$category] = $category;
 
 					/** SET FILTERS **/
 					$filters[get_field('year')] = get_field('year');

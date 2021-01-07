@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes">
     <link rel="profile" href="http://gmpg.org/xfn/11"/>
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>"/>
-	<?php wp_head(); ?>
+    <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?> data-fixed-footer="<?php echo get_theme_mod('footer_fixed'); ?>">
 <noscript>
@@ -16,7 +16,7 @@
     </strong>
 </noscript>
 <main class="main">
-	<?php require_once('inc/navigation-menu.php'); ?>
+    <?php require_once('inc/navigation-menu.php'); ?>
     <header class="main-header container-fluid" uk-sticky="top: 120; cls-active: active; cls-inactive: inactive;">
-		<?php require_once('inc/navbar.php'); ?>
+        <?php require_once('inc/navbar.php'); ?>
     </header>

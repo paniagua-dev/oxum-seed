@@ -14,4 +14,14 @@ function enqueue_scripts() {
 	$oxum->enqueue_style('css/main.css');
 	$oxum->enqueue_script('main.min.js', 'js/');
 }
+
+function print_processed_html($string)
+{
+    $search  = Array("'");
+    $replace = Array("\'");
+
+    $processed_string = str_replace($search, $replace , $string);
+
+    echo $processed_string;
+}
 add_action( 'wp_enqueue_scripts', 'enqueue_scripts');
