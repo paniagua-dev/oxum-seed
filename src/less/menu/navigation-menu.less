@@ -38,7 +38,7 @@
     }
   }
 
-  &.open + .main-header {
+  &.open + .main-header:not(.active) {
     .navbar-brand a {
       color: @brand-white;
     }
@@ -66,10 +66,12 @@
     transition: .25s ease-in-out;
   }
 
-  &.open {
-    .bar {
-      background-color: @brand-white;
-    }
+  &.open .bar {
+    background-color: @brand-white;
+  }
+
+  .main-header.active & .bar {
+    background-color: @title-color
   }
 
   &.close:not(.disabled):hover {

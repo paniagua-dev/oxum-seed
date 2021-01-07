@@ -19,7 +19,18 @@
     background-color: fade(@brand-white, 95%);
     max-height: 220px;
     min-width: 270px;
-    margin:auto;
+    margin: auto;
+
+    .card-body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card-title {
+      white-space: nowrap;
+    }
 
     .card-text {
       font-size: 1.5rem;
@@ -28,6 +39,7 @@
   }
 
   /** STYLE FOR PAGES **/
+
   &.for-page {
     height: @section-page-height;
     min-height: @section-page-min-height;
