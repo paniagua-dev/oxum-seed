@@ -12,7 +12,7 @@
 	$loop = new WP_Query($args);
 ?>
     <section class="section section-content shadow-lg">
-        <?php include('inc/artowrks-loop.php'); ?>
+        <?php include('inc/artworks-loop.php'); ?>
         <div
             id="artwork-ui"
             class="artwork-ui container"
