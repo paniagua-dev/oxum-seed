@@ -8,5 +8,4 @@ const buildCss = function () {
     return src(mains)
         .pipe(destination('css/'));
 }
-
 exports.buildCss = buildCss;

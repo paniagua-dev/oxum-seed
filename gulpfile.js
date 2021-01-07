@@ -18,6 +18,7 @@ if (!!process.env.npm_config_watch_build) {
     exports.default = function () {
         watch(watchers, {ignoreInitial: false}, series(...builds));
     }
+    console.log('watching files...');
 } else {
     exports.default = series(...builds);
 }
