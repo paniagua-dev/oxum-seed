@@ -8,9 +8,9 @@
             $category = print_processed_html(get_the_category()[0]->name);
             ?>
             {
-                src: '<?php echo htmlspecialchars(get_field('painting')); ?>',
+                src: '<?php echo get_field('painting'); ?>',
                 description: '<?php echo htmlspecialchars(get_field('description')); ?>',
-                label: '<?php the_title(); ?>',
+                label: '<?php echo html_entity_decode(get_the_title()); ?>',
                 category: '<?php echo $category; ?>',
                 filter: '<?php echo htmlspecialchars(get_field('year')); ?>'
             },
