@@ -11,7 +11,7 @@
 	);
 	$loop = new WP_Query($args);
 ?>
-<section class="section section-content shadow-lg">
+<section id="firstSection" class="section section-content shadow-lg">
     <div class="container-md">
         <?php include('inc/artworks-loop.php'); ?>
         <div

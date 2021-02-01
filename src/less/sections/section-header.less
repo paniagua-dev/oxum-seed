@@ -2,55 +2,64 @@
 @section-page-min-height: 150px;
 
 .section-header {
-  display: block;
-  position: relative;
-  margin-top: -@main-header-height;
-  height: calc(-@main-header-height + @section-min-height);
-  background-color: @brand-white;
+    display: block;
+    position: relative;
+    margin-top: -@main-header-height;
+    height: calc(-@main-header-height + @section-min-height);
+    background-color: @brand-white;
 
-  &-container {
-    &, .row {
-      height: 100%;
+    &-container {
+        &, .row {
+            height: 100%;
+        }
     }
-  }
-
-  .card {
-    padding: 60px;
-    background-color: fade(@brand-white, 95%);
-    max-height: 220px;
-    min-width: 270px;
-    margin: auto;
-
-    .card-body {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .card-title {
-      white-space: nowrap;
-    }
-
-    .card-text {
-      font-size: 1.5rem;
-      color: @brand-gray;
-    }
-  }
-
-  /** STYLE FOR PAGES **/
-
-  &.for-page {
-    height: @section-page-height;
-    min-height: @section-page-min-height;
 
     .card {
-      padding: 0;
-      text-align: center;
+        padding: 60px;
+        background-color: fade(@brand-white, 95%);
+        max-height: 220px;
+        min-width: 270px;
+        margin: auto;
+
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card-title {
+            white-space: nowrap;
+        }
+
+        .card-text {
+            font-size: 1.5rem;
+            color: @brand-gray;
+        }
     }
 
-    .card-title {
-      margin: 0;
+    /** STYLE FOR PAGES **/
+
+    &.for-page {
+        height: @section-page-height;
+        min-height: @section-page-min-height;
+
+        .card {
+            padding: 0;
+            text-align: center;
+        }
+
+        .card-title {
+            margin: 0;
+        }
     }
-  }
+
+    .uk-icon-link {
+        text-align: center;
+        padding-bottom: 12px;
+
+        &:after {
+            display: none;
+        }
+    }
 }

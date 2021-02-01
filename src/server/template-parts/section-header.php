@@ -8,13 +8,14 @@
             <div class="card col-6 text-center">
                 <div class="card-body">
                     <h2 class="card-title">
-						<?php echo get_bloginfo(); ?>
+                        <?php echo get_bloginfo(); ?>
                     </h2>
                     <p class="card-text">
-						<?php echo get_bloginfo('description'); ?>
+                        <?php echo get_bloginfo('description'); ?>
                     </p>
                 </div>
             </div>
+            <a href="#firstSection" uk-scroll uk-icon="icon: arrow-down; ratio: 2" class="uk-icon-link"></a>
         </div>
     </div>
 </section>
