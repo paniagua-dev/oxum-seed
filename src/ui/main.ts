@@ -1,3 +1,6 @@
+import {OXUM} from './interfaces';
+
+
 class App {
     public mainMenuOpen = false;
     private DOM = {
@@ -19,7 +22,7 @@ class App {
     }
 
     private getElement(selector: string): Element {
-        return document.querySelector('[oxum__' + selector + ']');
+        return document.querySelector(`[${OXUM.prefix}${selector}]`);
     }
 
     public init(): void {
@@ -32,7 +35,7 @@ class App {
         }
     }
 
-    public openMainMenu() {
+    public toggleMainMenu() {
         if (this.DOM.navigationMenuLink) {
             this.mainMenuOpen = !this.mainMenuOpen;
             this.toggleOpenClass(this.DOM.navigationMenu, this.mainMenuOpen);
@@ -41,13 +44,9 @@ class App {
     }
 
     public addDomActions() {
-        this.DOM.navigationMenuLink.addEventListener('click', this.openMainMenu.bind(this));
-        this.DOM.navigationMenuBurger.addEventListener('click', () => {
-            this.toggleClass(this.DOM.navigationMenuBurger, 'open', this.mainMenuOpen);
-            this.toggleClass(this.DOM.navigationMenuBurger, 'close', !this.mainMenuOpen);
-        });
+        this.DOM.navigationMenuLink.addEventListener('click', this.toggleMainMenu.bind(this));
         this.DOM.navigationMenu.addEventListener('transitionend', () => {
-
+            /* FOR ANIMATIONS */
         });
     }
 }
